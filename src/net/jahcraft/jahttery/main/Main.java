@@ -54,7 +54,7 @@ public class Main extends JavaPlugin {
 		sendLottery = false;
 		lottoMath.refundBets(this);
 		
-		Bukkit.getLogger().info("Jahttery Disabled!");
+		Bukkit.getLogger().info("Jahttery Unloaded and Disabled!");
 		
 	}
 	
