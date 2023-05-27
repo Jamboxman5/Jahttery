@@ -1,0 +1,12 @@
+main: net.jahcraft.jahttery.main.Main
+name: Jahttery
+version: 1.0.0
+author: Jamboxman5
+api-version: 1.19
+depend:
+commands:
+  Lottery:
+    aliases:
+    - lotto
+    - jahttery
+  
