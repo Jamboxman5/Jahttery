@@ -95,7 +95,7 @@ public class LotteryThread implements Runnable {
 
 	private void sendReloadMessage() {
 
-		Bukkit.getLogger().info("Lottery Reloaded: 30 Minutes Remaining");
+		if (Bukkit.getOnlinePlayers().size() > 0) Bukkit.getLogger().info("Lottery Reloaded: 30 Minutes Remaining");
 		for (Player p : Bukkit.getServer().getOnlinePlayers()) {
 			p.sendMessage(ChatColor.of("#FFD700") + "" + ChatColor.BOLD + 
 					LotteryStorage.prefix + ChatColor.of("#00E8FF") + "» " + ChatColor.of("#779AD8") + "Lottery reloaded! Drawing again in " + ChatColor.of("#00E8FF") + "30 minutes" + ChatColor.of("#779AD8") + ".");
@@ -105,7 +105,7 @@ public class LotteryThread implements Runnable {
 
 	private void sendM1() {
 		m1Sent = true;
-		Bukkit.getLogger().info("Lottery: 20 Minutes Remaining");
+		if (Bukkit.getOnlinePlayers().size() > 0) Bukkit.getLogger().info("Lottery: 20 Minutes Remaining");
 		for (Player p : Bukkit.getServer().getOnlinePlayers()) {
 			p.sendMessage(ChatColor.of("#FFD700") + "" + ChatColor.BOLD + 
 					LotteryStorage.prefix + ChatColor.of("#00E8FF") + "» " + ChatColor.of("#779AD8") + "Lottery will be drawn in " + ChatColor.of("#00E8FF") + "20 minutes" + ChatColor.of("#779AD8") + ".");
@@ -114,7 +114,7 @@ public class LotteryThread implements Runnable {
 
 	private void sendM2() {
 		m2Sent = true;	
-		Bukkit.getLogger().info("Lottery: 10 Minutes Remaining");
+		if (Bukkit.getOnlinePlayers().size() > 0) Bukkit.getLogger().info("Lottery: 10 Minutes Remaining");
 		for (Player p : Bukkit.getServer().getOnlinePlayers()) {
 			p.sendMessage(ChatColor.of("#FFD700") + "" + ChatColor.BOLD + 
 					LotteryStorage.prefix + ChatColor.of("#00E8FF") + "» " + ChatColor.of("#779AD8") + "Lottery will be drawn in " + ChatColor.of("#00E8FF") + "10 minutes" + ChatColor.of("#779AD8") + ".");
@@ -124,7 +124,7 @@ public class LotteryThread implements Runnable {
 
 	private void sendM3() {
 		m3Sent = true;	
-		Bukkit.getLogger().info("Lottery: 5 Minutes Remaining");
+		if (Bukkit.getOnlinePlayers().size() > 0) Bukkit.getLogger().info("Lottery: 5 Minutes Remaining");
 		for (Player p : Bukkit.getServer().getOnlinePlayers()) {
 			p.sendMessage(ChatColor.of("#FFD700") + "" + ChatColor.BOLD + 
 					LotteryStorage.prefix + ChatColor.of("#00E8FF") + "» " + ChatColor.of("#779AD8") + "Lottery will be drawn in " + ChatColor.of("#00E8FF") + "5 minutes" + ChatColor.of("#779AD8") + ".");
@@ -133,7 +133,7 @@ public class LotteryThread implements Runnable {
 
 	private void sendM4() {
 		m4Sent = true;		
-		Bukkit.getLogger().info("Lottery: 1 Minute Remaining");
+		if (Bukkit.getOnlinePlayers().size() > 0) Bukkit.getLogger().info("Lottery: 1 Minute Remaining");
 		for (Player p : Bukkit.getServer().getOnlinePlayers()) {
 			p.sendMessage(ChatColor.of("#FFD700") + "" + ChatColor.BOLD + 
 					LotteryStorage.prefix + ChatColor.of("#00E8FF") + "» " + ChatColor.of("#779AD8") + "Lottery will be drawn in " + ChatColor.of("#00E8FF") + "1 minute" + ChatColor.of("#779AD8") + ".");
@@ -154,7 +154,7 @@ public class LotteryThread implements Runnable {
 				}
 			} else {
 				
-				Bukkit.getLogger().info("Lottery: There Was No Winner. 30 Minutes Remaining");
+				if (Bukkit.getOnlinePlayers().size() > 0) Bukkit.getLogger().info("Lottery: There Was No Winner. 30 Minutes Remaining");
 				for (Player p : Bukkit.getServer().getOnlinePlayers()) {
 					p.sendMessage(ChatColor.of("#FFD700") + "" + ChatColor.BOLD + 
 							LotteryStorage.prefix + ChatColor.of("#00E8FF") + "» " + ChatColor.YELLOW + "Nobody!" + ChatColor.of("#779AD8") + " The lottery will draw again in " + ChatColor.of("#00E8FF") + "30 minutes" + ChatColor.of("#779AD8") + ".");
@@ -163,7 +163,7 @@ public class LotteryThread implements Runnable {
 			
 		} catch (Exception e) {
 						
-			Bukkit.getLogger().info("Lottery: There Was No Winner. 30 Minutes Remaining");
+			if (Bukkit.getOnlinePlayers().size() > 0) Bukkit.getLogger().info("Lottery: There Was No Winner. 30 Minutes Remaining");
 			for (Player p : Bukkit.getServer().getOnlinePlayers()) {
 				
 				p.sendMessage(ChatColor.of("#FFD700") + "" + ChatColor.BOLD + 
